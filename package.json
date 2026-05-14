@@ -1,0 +1,13 @@
+{
+  "name": "docker-demo-app",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "body-parser": "^2.2.2",
+    "express": "^4.22.2",
+    "mongodb": "^3.6.9"
+  }
+}
