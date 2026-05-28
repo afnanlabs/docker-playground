@@ -1,16 +1,15 @@
-DOCKER CHEATSHEETS
-
 # Docker Basics
 
 You have probably faced this
 "It works on my system but not on yours"
 
-# Why does this happens?
+Why does this happens?
 
 1st POV : Works fine on my laptop
 2nd POV : Get's error on client's laptop
 
-The Problem -
+## The Problem -
+
 Every system has different:
 
 - OS (Windows,macOS,Linux)
@@ -22,18 +21,15 @@ Note: Even small differences can brake your app
 
 That's why the same app behaves differently on different systems
 
-# What is Docker?
+## What is Docker?
 
 Docker is platform that packages your application along with all it's dependencies into a single unit called Images
 
-It includes everything you app needs
-Application + Libraries + Dependencies + OS = Docker images
+[![docker-application.jpg](https://i.postimg.cc/Tw46qQMC/docker-application.jpg)](https://postimg.cc/8JM9TRC6)
 
 💡Once the image is created, you can run it anywhere and it will behave the same
 
-# Let's move the most important topic -
-
-Docker Images vs Docker Container
+## Docker Images vs Docker Container
 
 Docker image:
 
@@ -54,7 +50,7 @@ Image is a blueprint which is run into a Container which is running instance
 Image is static,
 Container is dynamic!
 
-# How Docker Works?
+## How Docker Works?
 
 The basic flow is simple
 
@@ -64,7 +60,7 @@ The basic flow is simple
 
 💡 Write -> Build -> Run
 
-# Why use Docker?
+## Why use Docker?
 
 Docker makes our lives so much easier!
 
@@ -77,7 +73,7 @@ Docker makes our lives so much easier!
 💡 Docker = Consistency + Speed + Probability
 That's why it's the foundation of DevOps
 
-# Docker in Real World
+## Docker in Real World
 
 Docker is used everywhere in DevOps!
 
