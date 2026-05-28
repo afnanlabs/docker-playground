@@ -296,3 +296,22 @@ docker tag myapp:latest myapp:v1
 docker rmi <image> /// Remove image
 docker rmi -f <image> // Force remove
 docker image prune // Remove unused images
+
+# Network Commands
+
+docker network ls // List Networks
+docker network create mynet // Create network
+docker network inspect mynet // Show details
+docker network rm mynet // Remove network
+
+# Connect Containers
+
+docker run --network mynet --name web nginx
+docker network connet mynet <container>
+docker network disconnect mynet <container>
+
+# Port Mapping
+
+docker run -p 8080:80 nginx
+docker run -p 127.0.0.1:8080:80 nginx
+docker run -P nginx // Random Port
