@@ -246,3 +246,10 @@ docker run -it ubuntu bash // Interactive
 docker run -d nginx // Background
 docker run --rm nginx // Auto-remove
 docker run -e KEY=VALUE nginx // Environment
+
+# List Container
+
+docker ps // Runnning containers
+docker ps -a // All containers
+docker ps -l // Last container
+docker ps -q // Container IDs only
