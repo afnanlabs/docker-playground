@@ -276,3 +276,23 @@ docker top <container> // RUnning processes
 docker stats <container> // Live Stats
 docker rm <container> // Remove container
 dokcer rm -f <container> // Force remove
+
+# List & Search
+
+docker images // List local images
+docker images -a // Include intermediate
+docker search nginx // Search Docker Hub
+docker pull nginx // Download image
+
+# Build & Tag
+
+docker build -t myapp . // Build from Dockerfile
+dokcer build -t myapp:1.0 .
+docker tag myapp myrepo/myapp
+docker tag myapp:latest myapp:v1
+
+# Remove images
+
+docker rmi <image> /// Remove image
+docker rmi -f <image> // Force remove
+docker image prune // Remove unused images
