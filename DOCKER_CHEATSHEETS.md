@@ -361,3 +361,23 @@ docker push username/myapp: v1.0
 docker pull ubuntu
 docker pull nginx:latest
 docker pull myrepo.azurecr.io/myapp
+
+# Basic Compose File:
+
+version: '3.8'
+services:
+web:
+image: nginx
+ports: - "8080:80"
+db:
+image: postgres
+environment:
+POSTGRES_PASSWORD: password
+
+# Compose Commands:
+
+docker-compose up // Start services
+docker-compose up -d // Detached
+docker-compose down // Stop services
+docker-compose logs // View logs
+docker-compose ps // List services
