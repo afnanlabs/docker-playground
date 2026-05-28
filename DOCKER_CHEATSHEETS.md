@@ -97,3 +97,52 @@ This section contains
 
 1. Volumes - Persist data beyong container.
 2. Networks - Connect containers to talk to each other.
+   3.Docker Compose - Run multi-Container apps with a single commands
+3. Environmental Variables - Configure apps the smart way.
+4. Secrets - Keep sensitive data safe.
+5. Real World Use - Where does Docker is used in real projects
+6. Best Practices - Simple tips to write better Docker setups
+
+## What are Docker Volumes?
+
+Container are temporary.
+Volumes make your data permanent.
+
+The Problem:
+When a container is stopped or removed, all the data inside it is lost forever!
+
+The Solution:
+Use Docker Volumes to store data outside the container. Your data stays safe, no matter what!
+
+### What can be stored in Volumes?
+
+1. Database Data
+2. Log Files
+3. App Configurations
+4. User Uploads & Files
+5. Any Persistent Data
+
+💡 Volumes = Data Persistence = Peace of Mind
+
+## Docker Networks
+
+Docker Networks allows containers to commumicate with each other securely
+Think of it as a private network for your container!
+
+Why this matter?
+
+- Containers can talk to each other.
+- Better isolation
+- Easy app communication.
+- More control & security
+
+### Examples -
+
+[![docker-eg.jpg](https://i.postimg.cc/XqL9zZLd/docker-eg.jpg)](https://postimg.cc/hQJJJtHt)
+
+### Common Network Types
+
+1. Bridges (Default) - Containers on the same Docker host can communicate.
+2. Overlay - For multi-host communication (Docker Swarm)
+3. Host - Container shares the host's network.
+4. None - No networking for the container. (Fully isolated)
