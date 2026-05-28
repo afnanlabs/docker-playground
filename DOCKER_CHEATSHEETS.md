@@ -220,3 +220,29 @@ Compose = Simplicity + Consistency + Power
 ## Docker Resources Limits
 
 [![Docker-Resource-Limits.jpg](https://i.postimg.cc/50QY13zw/Docker-Resource-Limits.jpg)](https://postimg.cc/WFjbw0X3)
+
+# Installation & Version
+
+docker --version //Check Version
+docker infor // System info
+docker run hello-world // Test installation
+
+# Get Help
+
+docker help
+docker <command> --help
+docker run --help
+
+# Run containers
+
+docker run nginx // Run image
+docker run -d nginx // Detached mode
+docker run --name myapp nginx // Named Container
+docker run -p 8080:80 nginx //Port mapping
+
+# Container Modes:
+
+docker run -it ubuntu bash // Interactive
+docker run -d nginx // Background
+docker run --rm nginx // Auto-remove
+docker run -e KEY=VALUE nginx // Environment
