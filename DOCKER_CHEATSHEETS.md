@@ -315,3 +315,23 @@ docker network disconnect mynet <container>
 docker run -p 8080:80 nginx
 docker run -p 127.0.0.1:8080:80 nginx
 docker run -P nginx // Random Port
+
+# Basic Structure
+
+FROM ubuntu:latest
+RUN apt-get update
+COPY . /app
+WORKDIR /app
+CMD ["python", "app.py"]
+
+# Common Instructions
+
+FROM <image> // Base image
+RUN <command> // Execute command
+COPY <src> <dest> // Copy files
+ADD <src> <dest> // Copy with extract
+WORKDIR <path> // Set directory
+ENV KEY=value // Environment variable
+EXPOSE <port> // Document port
+CMD ["executable"] // Default command
+ENTRYPOINT ["executable"] // Entrypoint
