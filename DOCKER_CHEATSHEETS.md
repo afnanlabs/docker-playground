@@ -253,3 +253,26 @@ docker ps // Runnning containers
 docker ps -a // All containers
 docker ps -l // Last container
 docker ps -q // Container IDs only
+
+# Start/Stop
+
+docker start <container> // Start stopped
+docker stop <container> // Stop running
+docker restart <container>
+docker pause <container> // Pause
+docker unpause <container>
+
+# Logs & Exec
+
+docker logs <contianer> // View Logs
+docker logs -f <container> // Follow Logs
+docker exec -it <container> bash // Run command
+docker exec <container> ls
+
+# Inspect & Remove
+
+docker inspect <container> // Show details
+docker top <container> // RUnning processes
+docker stats <container> // Live Stats
+docker rm <container> // Remove container
+dokcer rm -f <container> // Force remove
