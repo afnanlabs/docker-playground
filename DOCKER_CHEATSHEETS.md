@@ -142,3 +142,81 @@ Why this matter?
 2. Overlay - For multi-host communication (Docker Swarm)
 3. Host - Container shares the host's network.
 4. None - No networking for the container. (Fully isolated)
+
+## Environment Variables
+
+1. The Pain Point
+   Hardcoding configs like passwords, API keys, or DB details in your app in risky and not scalable!
+
+2. The Solutions
+   Use Environment Variables to store congifuration outside your code.
+   Safer, cleaner & easier to manage!
+
+### How it works
+
+Your App -> ReadFrom -> .env file
+Your app reads the values at runtime, not at build time!
+
+### Examples
+
+[![docker-environmental-variables.png](https://i.postimg.cc/NFM22DhZ/docker-environmental-variables.png)](https://postimg.cc/hzktH9t0)
+
+## Docker Compose
+
+docker-compose.yml
+Docker Compose lets you define and run multi-container applications with a single YAML file
+
+### Why Use Docker Compose?
+
+1. Easy multi-container management
+2. Consistent Environments
+3. Faster development workflow
+4. Better Collaboration
+5. Production ready
+
+### How it works
+
+docker compose up (Define services) -> docker compose up (Single command) -> Multiple Container Up & Running [ db (PostgreSQL), backend(Node.js), nginx(Nginx)]
+
+### Examples
+
+version: '3.8'
+services:
+db:
+image: postgre:15
+environment:
+POSTGRES_PASSWORD: mypass
+
+    app:
+        build: ./app
+        ports:
+            - "3000:3000:
+        depends_on:
+            - db
+        nginx:
+            image: nginx:alpine
+            ports:
+                - "80:80"
+            depends_on:
+                - app
+
+### Explanation
+
+- Define all services and their configuration
+- Start everything with one command
+- Handles dependencies automatically
+- Works the same everywhere!
+
+Compose = Simplicity + Consistency + Power
+
+## Docker Healthchecks
+
+[![Docker-Health-Check.jpg](https://i.postimg.cc/zDRK1JSK/Docker-Health-Check.jpg)](https://postimg.cc/pyRpfMSL)
+
+## Docker Restart Policies
+
+[![Docker-Restar-Policies.jpg](https://i.postimg.cc/QdSWqVs5/Docker-Restar-Policies.jpg)](https://postimg.cc/sMQXjjMD)
+
+## Docker Resources Limits
+
+[![Docker-Resource-Limits.jpg](https://i.postimg.cc/50QY13zw/Docker-Resource-Limits.jpg)](https://postimg.cc/WFjbw0X3)
