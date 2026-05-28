@@ -348,3 +348,16 @@ docker volume rm mydata // Remove volume
 docker runv mydata:/app/data nginx
 docker runv/host/path:/container/path nginx
 docker run --mount type volume,src=mydata,dst=/data nginx
+
+# Push to Registry:
+
+docker login // Login to Docker Hub
+docker tag myapp username/myapp
+docker push username/myapp
+docker push username/myapp: v1.0
+
+# Pull from Registry:
+
+docker pull ubuntu
+docker pull nginx:latest
+docker pull myrepo.azurecr.io/myapp
