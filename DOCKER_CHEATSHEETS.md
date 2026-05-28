@@ -335,3 +335,16 @@ ENV KEY=value // Environment variable
 EXPOSE <port> // Document port
 CMD ["executable"] // Default command
 ENTRYPOINT ["executable"] // Entrypoint
+
+# Volume Commands
+
+docker volume 1s // List volumes
+docker volume create mydata // Create volume
+docker volume inspect mydata // Show details
+docker volume rm mydata // Remove volume
+
+# Mount Volumes
+
+docker runv mydata:/app/data nginx
+docker runv/host/path:/container/path nginx
+docker run --mount type volume,src=mydata,dst=/data nginx
