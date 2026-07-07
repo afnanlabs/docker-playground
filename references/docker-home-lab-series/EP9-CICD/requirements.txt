@@ -1,0 +1,3 @@
+# Requirements for EP9 - CI/CD
+
+flask==2.2.3
